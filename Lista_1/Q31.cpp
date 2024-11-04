@@ -1,54 +1,34 @@
 #include <iostream>
 #include <array>
-#include <cmath>
 
-using std::array, std::sqrt;
+using std::array;
 
-//ARRUMAAAAAAAAAAAAAAAAAR, NÃO ESTÁ PRONTA
-
-bool ehprimo(int &num){
-    if(num == 1)
+bool ehprimo(int x){
+    if(x <= 1)
         return false;
-    if( num == 2)
-        return true;
-    if( num%2 == 0)
-        return false;
-    else{
-        for (int j = 3; j<=sqrt(num); j+=2){ //dois é o único primo par, então basta verificar os nums impares
-            if(num%j == 0)
-                return false;
-        }
-        return true;
+    for (int i=2; i<x; i++){
+        if(i%x == 0)
+            return false;
     }
+    return true;
 };
 
 bool temprimo(auto &arr){
-    for( auto &i : arr){
-        if(i==2){
+    for(auto &i:arr){
+        if(ehprimo(i))
             return true;
-        }
-        else{
-            for(int j=2 ; j<i; j++){
-                if(i%j == 0)
-                    break;
-                else if(j==i-1)
-                    return true;
-            }
-        }
     }
     return false;
 };
 
 int main(){
 
-    array l{1,4,6,8,10};
+    array num{1,2,3,4,6,16}; // Erro por falta de atualização do compilador para C++20
 
-    if(temprimo(l)){
-        std::cout << "A lista contém algum número primo" << std::endl;
-    }
-    else{
-        std::cout << "A lista não contém nenhum número primo" << std::endl;
-    }
+    if(temprimo(num))
+        std::cout << "Contem primo no array!" << std::endl;
+    else
+        std::cout << "O array nao possui numero primo!" << std::endl;
 
     return 0;
 }
