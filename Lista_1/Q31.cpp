@@ -6,8 +6,9 @@ using std::array;
 bool ehprimo(int x){
     if(x <= 1)
         return false;
+
     for (int i=2; i<x; i++){
-        if(i%x == 0)
+        if(x%i == 0)
             return false;
     }
     return true;

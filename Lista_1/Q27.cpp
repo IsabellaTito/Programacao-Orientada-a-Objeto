@@ -1,8 +1,19 @@
 #include <iostream>
 
+//PODEMOS USAR TEMPLATE para generalizar
+/*
+template<typename T>
+
+void swap (T *p1, T *p2){
+    T temp{*p1};
+    *p1 = *p2;
+    *p2 = temp;
+};
+
+*/
+
 void swap( int *p1, int *p2){
-    int temp{0};
-    temp = *p1;
+    int temp{*p1};
     *p1 = *p2;
     *p2 = temp;
 };

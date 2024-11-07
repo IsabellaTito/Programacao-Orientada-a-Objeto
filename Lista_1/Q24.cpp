@@ -4,7 +4,7 @@
 
 int main(){
     double n1{0},n2{0},n3{0},media{0};
-    std::string nome;
+    std::string nome{};
 
     std::cout << "Digite o primeiro nome: ";
     std::cin >> nome;
