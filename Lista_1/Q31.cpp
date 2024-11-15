@@ -13,7 +13,7 @@ bool ehprimo(int x){
     }
     return true;
 };
-
+// Forma correta sem o auto -> bool temprimo(array<int,5> &arr)
 bool temprimo(auto &arr){
     for(auto &i:arr){
         if(ehprimo(i))
