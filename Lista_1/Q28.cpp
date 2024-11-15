@@ -8,7 +8,7 @@ void swap (T &r1, T &r2){
     T temp{r1};
     r1 = r2;
     r2 = temp;
-};
+}
 
 */
 
@@ -16,7 +16,7 @@ void swap( int &r1, int &r2){
     int temp{r1};
     r1 = r2;
     r2 = temp;
-};
+}
 
 int main(){
 
@@ -32,3 +32,9 @@ int main(){
 
     return 0;
 }
+
+// Não precisaria criar as referências na main, poderia só mandar as váriaveis.
+// Diferença entre ref e ponnteiros é que no argumento em ref basta as váriaves, no caso, 
+// swap(n1,n2). Com ponteiros enviariamos swap(&n1,&n2).
+// Chamar a função na main como swap(2,3) estaria errado, pois 2 e 3 são consts sendo enviados
+// para uma função com parametros não consts. 
