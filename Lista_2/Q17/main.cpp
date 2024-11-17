@@ -26,7 +26,7 @@ int main(){
     B6.setCasa("Corvinal");
 
     B5.display();
-    cout << "O feitico preferido da bruxa " << B6.getNome() << " da " << B6.getCasa() << " eh " << B6.getFeitico() << endl;
+    cout << "O feitico preferido do bruxo " << B6.getNome() << " da " << B6.getCasa() << " eh " << B6.getFeitico() << endl;
 
     B2.lancarFeitico();
     B4.lancarFeitico();
