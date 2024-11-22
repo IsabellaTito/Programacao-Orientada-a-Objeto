@@ -11,7 +11,7 @@ string Carro::getMarca() const{
 }
 
 void Carro::setMarca(string marca){
-    m_marca = marca;
+    m_marca = ( marca.empty() ? "\"Sem marca\"" : marca );
 }
 
 string Carro::getModelo() const{
@@ -19,7 +19,7 @@ string Carro::getModelo() const{
 }
 
 void Carro::setModelo(string modelo){
-    m_modelo = modelo;
+    m_modelo = ( modelo.empty() ? "\"Sem modelo\"" : modelo );
 }
 
 int Carro::getAno() const{
@@ -31,5 +31,6 @@ void Carro::setAno(int ano){
 }
 
 string Carro::toString() const{
-    return (getMarca() + " " + getModelo() + " " + std::to_string(getAno()));
+    return m_marca + " " + m_modelo + " " + std::to_string(m_ano);
+    //return (getMarca() + " " + getModelo() + " " + std::to_string(getAno()));
 }
