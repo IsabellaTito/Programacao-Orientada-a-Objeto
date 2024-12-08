@@ -3,15 +3,7 @@
 
 int main(){
 
-    Pessoa p1{"Isabella Tito", "43567130870"}, p2{"Matheus Nascimento"}, p3{"Inventado","12345678910"};
-
-    p1.apresentar();
-
-    p2.apresentar();
-
-    p2.setCPF("08339113410");
-
-    p2.apresentar();
+    Pessoa p3{"Inventado","12345678910"};
 
     p3.apresentar();
 
