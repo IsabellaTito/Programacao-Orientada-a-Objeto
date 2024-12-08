@@ -70,7 +70,6 @@ void Pessoa::setCPF(string CPF){
     
 }
 
-
 void Pessoa::apresentar(){
     cout<<"Nome: "<< p_nome<<endl;
     cout<<"CPF: ";
